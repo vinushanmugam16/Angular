@@ -1,0 +1,69 @@
+<p>pipes works!</p>
+
+<div>
+    <p>Today's date {{today | date :'shortTime'}}</p>
+    <p>Today's date {{today | date :'mediumTime'}}</p>
+    <p>Today's date {{today | date :'yyyy-MM-dd'}}</p>
+    <p>Today's date {{today | date :'mm:ss'}}</p>
+</div>
+
+
+
+<div>
+    <p>Uppercase: {{word | uppercase}}</p>
+    <p>Lowercase :{{word | lowercase}}</p>
+    <p>Titlecase : {{state | titlecase}}</p>
+    <p>{{'true | false' | titlecase}}</p>
+    <p>{{'for-your-information' | titlecase}}</p>
+    <p>{{'cat,dog,tiger' | titlecase}}</p>
+</div>
+
+<div>
+    <p>Amount : {{amount | currency }}</p>
+    <p>Amount : {{amount | currency : 'en-US' }}</p>
+    <p>Amount : {{amount | currency : 'CAD' :'symbol':'4.2-2'}}</p>
+    <p>Amount : {{amount | currency : 'CLP' }}</p>
+</div>
+<div>
+    <p>Decimal :{{digit | number}}</p>
+    <p>Decimal :{{-38.9 | number : '4.1'}}</p>
+    <p>Decimal :{{40.9 | number : '1.0-0'}}</p>
+    <p>Decimal :{{13800 | number}}</p>
+    <p>Decimal :{{3.1429948283| number :'4.2'}}</p>
+</div>
+
+<div>
+    <p>Percentage: {{23.9| percent}}</p>
+    <p>Percentage: {{20.0| percent}}</p>
+    <p>Percentage: {{133.86| percent : '3.1'}}</p>
+</div>
+
+<!-- 
+<div>
+    <p>{{data | async}}</p>
+</div> -->
+
+<div>
+    <p>Without json: {{details}}</p>
+    <p>With json: {{details | json}}</p>
+</div>
+
+<p>Company's Date of joining :{{join | date : 'longDate'}}</p>
+<p>Company's Date of joining :{{join | date : 'fullDate'}}</p>
+<p>Company's Date of joining :{{join | date : 'full'}}</p>
+
+<p>My Birthday is on {{birthday | date}}</p>
+<p>Birthday: {{birthday | date:'full'}}</p>
+
+<p>This day {{birthday | date:'long' | lowercase}}</p>
+
+
+<p>{{state2 ? 'These are uppercase'  : 'These are in lowercase' | lowercase}}</p>
+<p>{{false ? 'These are uppercase'  : ('These are in lowercase' | lowercase)}}</p>
+<p>{{(true ? 'These are uppercase'  : 'These are in lowercase' )| lowercase}}</p>
+
+
+<input type="number" #phone  placeholder="Phone number">
+<button (click)="toUpdateNum(phone)">Button</button>
+
+<p>Value : {{value | custompipe:2}}</p>

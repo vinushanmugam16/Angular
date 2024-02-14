@@ -1,0 +1,21 @@
+.items{
+    display:block;
+    border:2px solid black;
+    width:250px;
+    height:700px;
+    text-align: center;
+    color:darkgreen;
+}
+.state{
+    color:brown;
+    
+}
+img{
+    width:100px;
+    height:150px;
+}
+.state{
+    color:red;
+    font-style: italic;
+    padding :auto;
+}

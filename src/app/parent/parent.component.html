@@ -1,0 +1,16 @@
+<p>parent works!</p>
+
+<p>parent works!</p>
+
+<div>
+  <label >Parent's component</label>
+  <input type="text" >
+</div>
+<app-child  [product]="watch"   
+  [property]="properties"  
+  [name]="person" 
+  [inStock]="stock" 
+  (message)="receiveMsg($event)"
+  (state)="getNum()"></app-child>
+   <p>Number:{{num}}</p>
+ 

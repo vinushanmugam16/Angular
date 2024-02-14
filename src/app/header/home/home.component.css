@@ -1,0 +1,8 @@
+div{
+    display: block;
+    border:5px solid black;
+    width:100vh;
+    height:500px;
+    text-align: center;
+    font-weight: bold;
+}

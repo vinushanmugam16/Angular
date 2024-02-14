@@ -1,0 +1,89 @@
+<p>binding works!</p>
+
+
+<input [value]="firstName"><br>
+<input bind-value="lastName">
+
+
+<p>Greets:{{sentence}}</p>
+
+<table>
+    <tr> 
+        <th >Roll.No</th>
+        <th>StudentName</th>
+        <th>Standard</th>
+        <th [attr.colspan]="1+4">Subject</th>
+        <th [colSpan]='5'>Marks</th>
+
+    </tr>
+    <tr>
+        <td>101</td>
+        <td>Lisa</td>
+        <td>10th</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Social</td>
+        <td>English</td>
+        <td>Tamil</td>
+        <td>89</td>
+        <td>80</td>
+        <td>91</td>
+        <td>82</td>
+        <td>90</td>
+    </tr>
+    <tr>
+        <td>103</td>
+        <td>Ram</td>
+        <td>10th</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Social</td>
+        <td>English</td>
+        <td>Tamil</td>
+        <td>80</td>
+        <td>92</td>
+        <td>84</td>
+        <td>82</td>
+        <td>94</td>
+    </tr>
+</table>
+<hr>
+<!-- <button [disabled]="toChange">button</button> -->
+<br>
+<div>
+    <input type="text" [value]='firstName'>
+    <input type="text" [value]="lastName">
+</div>
+
+
+<br>
+
+<button (click)="toChangeName()">Change</button>
+<p>Name:{{name}}</p>
+
+
+<p>{{availableCount}}</p>
+<button (click)="toCount()">CLick To See Number</button>
+<hr>
+
+<p [class.state]="false"> Hi , It is class binding</p>
+
+<p class="item">Proverb: {{proverb}}</p>
+
+<p [class.done]="true">Hello, This is class binding </p>
+
+<p [class.state2]="change">{{details}}</p>
+
+<p [attr.class]>{{city}}</p>
+
+<p [style.color]="'red'">Hi, It is a style binding</p>
+
+<p [style.fontSize]="'12px'">Hi, It is a style binding using fontsize</p>
+
+
+
+<!-- <ng-content></ng-content> -->
+<ng-content class="[state]"></ng-content>
+<div>
+    <p>These are currently in use</p>
+</div>

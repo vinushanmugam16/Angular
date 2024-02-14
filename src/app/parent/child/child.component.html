@@ -1,0 +1,101 @@
+<p>child works!</p>
+
+<div class="items">
+    <p class="state">{{product}}</p>
+    <img [src]='imgUrl'>
+    <p>InStock:{{inStock}}</p>
+    <p>ProductId:{{property.productId}}</p>
+    <p>ProductName:{{property.productName}}</p>
+    <p>Color:{{property.color}}</p>
+    <p>Price:{{property.price}}</p>
+    <p>Discount:{{property.discount}}</p>
+    <p>ProductId:{{property.productId}}</p>
+    <p >{{inStock > 0 ? 'Only'+ inStock  :  'Not in Stock'}}</p>
+    <button [disabled]="!(inStock > 0)">Buy Now</button>
+</div>
+
+
+
+<p>Name of the Person:{{personName}}</p>
+
+<!-- <label> Add item:<input #newitem></label>
+<button (click)="sendMessage(newitem.message)"></button> -->
+
+<p *ngIf="pass">{{contact}}</p>
+
+
+<button  (click)="onCount()">Click to increase</button>
+<p *ngIf="count <=10">{{count}}</p>
+
+
+<button (click)="onChangeText()">ChangeText</button>
+<p >Text: {{text}}</p>
+
+<p *ngFor="let item of [1,10,45,39]">{{item}}</p>
+
+<p *ngFor="let i of words">{{i}}</p>
+
+<a href="#">Home</a>
+
+
+<p [ngStyle]="{color:'red', fontWeight:'bold'}">The text is in style format.</p>
+
+<p [ngStyle]="{color:'green'}">{{note ? 'This is green color':'This is false'}}</p>
+
+<p [ngStyle]="{fontSize: true? '24px': '10px'}">Setting font size with condition</p>
+
+<p class="state">'Hello All'</p>
+
+<!-- <button [ngClass]="state">Button</button><br> ///////////// -->
+
+
+<input type="text" [value]="searchText" (input)="updateText($event)">
+<p>Searching For: {{searchText}}</p>
+
+<div>
+    <button (click)="dec()">Dec</button>
+    <button (click)="inc()">Inc</button>
+    <!-- <input type="number" [(ngModel)] = "size"> -->
+    <p>Dress Size:{{size}}</p>
+</div>
+
+
+
+    <!-- <label>One</label>
+    <input type="radio" name="One">
+    <label>Two</label>
+    <input type="radio" name="Two">
+    <label>Three</label>
+    <input type="radio" name="Three">
+    <label>Four</label>
+    <input type="radio" name="Four">
+    <label>No</label>
+    <input type="radio" name="No"> -->
+
+    <div [ngSwitch]="selectedValue">
+        <p *ngSwitchCase="value[0]">{{value[0]}} is pressed</p>
+     
+        <p *ngSwitchCase="value[1]">{{value[1]}} is pressed</p>
+     
+        <p *ngSwitchCase="value[2]">{{value[2]}} is pressed</p>
+      
+        <p *ngSwitchCase="value[3]">{{value[3]}} is pressed</p>
+       
+        <p *ngSwitchDefault>Nothing pressed</p>
+    </div>
+
+
+
+
+    <div>
+        <input type="text">
+        <button (click)="onChange()">Button</button>
+        <p>Message:{{message}}</p>
+    </div>
+
+
+
+    <div>
+        <button (click)="updateValue()">Button</button>
+        
+    </div>

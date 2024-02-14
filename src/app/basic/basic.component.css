@@ -1,0 +1,7 @@
+:host{
+    color:red;
+}
+
+:host(.state){
+    font-weight: bold;
+}

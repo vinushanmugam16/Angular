@@ -1,0 +1,38 @@
+<p>practice works!</p>
+<div><p>Product Name:{{productName}}</p>
+    <p>Price:{{price}}</p>
+    <p>Colour:{{color}}</p>
+    <p>Discount Offer:{{discount + '%'}}</p>
+    <p>Available:{{available ? 'YES' : 'NO'}}</p>
+    </div>
+
+<div>
+<p>Grocery Details:</p>
+<p>Fruit:{{grocery.fruit}}</p>
+<p>Vegetable:{{grocery.vegetable}}</p>
+<p>Spices:{{grocery.spices}}</p>
+<p>Items:{{grocery.items}}</p>
+<p>Cost:{{grocery.cost}}</p>
+<p>Discount:{{grocery.discount}}</p>
+<p>TotalCost:{{grocery.cost-(grocery.cost * grocery.discount / 100)}}</p>
+</div>
+
+<img [src]='productImage' alt="Women-watch">
+
+
+
+<h1>{{studentName}}</h1>
+
+
+<p>{{getName(greet)}}</p>
+
+<p>{{digit}}</p>
+
+
+
+
+<div>
+    <input type="text" placeholder="Firstname" required><br>
+    <input type="text" placeholder="Lastname" required><br>
+    <button>Submit</button>
+</div>
