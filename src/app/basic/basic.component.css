@@ -1,7 +1,16 @@
-:host{
+/* :host{
     color:red;
-}
+} */
 
 :host(.state){
+    font-weight: bold;
+}
+
+p::part(.tab){
+    color:deepskyblue;
+}
+
+
+p::after{
     font-weight: bold;
 }

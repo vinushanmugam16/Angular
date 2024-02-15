@@ -5,7 +5,7 @@ import { SourceService } from '../service/source.service';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
-  providers:[SourceService]
+  // providers:[SourceService]
 })
 export class MainComponent {
 

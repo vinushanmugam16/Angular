@@ -11,8 +11,10 @@ export class MethodComponent implements OnChanges{
   constructor(){
     
   }
+  
   ngOnChanges(changes: SimpleChanges): void {
     
      console.log(changes);
+    
   }
 }

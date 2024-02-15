@@ -24,6 +24,8 @@ import { EmulatedComponent } from './view-encapsulation/emulated/emulated.compon
 import { MethodComponent } from './method/method.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { SideBarComponent } from './dependency/main/side-bar/side-bar.component';
+import { SourceService } from './dependency/service/source.service';
 
 
 @NgModule({
@@ -49,6 +51,7 @@ import { FormsModule } from '@angular/forms';
     EmulatedComponent,
     MethodComponent,
     CustompipePipe,
+    SideBarComponent,
 
 
   ],
@@ -58,7 +61,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   
   ],
-  providers: [],
+  providers: [SourceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
