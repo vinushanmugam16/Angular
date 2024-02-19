@@ -57,4 +57,9 @@ export class PipesComponent {
 
 
   value:number=3;
+
+  input:string='Hey';
+
+  
+
 }

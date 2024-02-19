@@ -80,4 +80,12 @@ updateValue(){
   this.state.emit(12345);
 }
 
+@Output() state2:EventEmitter<string>=new EventEmitter<string>();
+specifiedLine:string='Getting data flow from child to parent';
+getState(){
+  this.state2.emit(this.specifiedLine);
 }
+}
+
+
+

@@ -1,5 +1,6 @@
 import {  NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,23 @@ import { CustompipePipe } from './custompipe.pipe';
 import { FormsModule } from '@angular/forms';
 import { SideBarComponent } from './dependency/main/side-bar/side-bar.component';
 import { SourceService } from './dependency/service/source.service';
+import { PageComponent } from './page/page.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AdminComponent } from './dependency/admin/admin.component';
+
+
+
+const routes:Routes=[
+    {path:'',component:HomepageComponent},
+    {path:'Homepage',component:HomepageComponent},
+    {path: 'Page' ,component:PageComponent},
+    {path:'About',component:AboutComponent},
+    {path:'Contact',component:ContactComponent},
+    {path:'**',component:NotFoundComponent}
+]
 
 
 @NgModule({
@@ -52,13 +70,20 @@ import { SourceService } from './dependency/service/source.service';
     MethodComponent,
     CustompipePipe,
     SideBarComponent,
+    PageComponent,
+    AboutComponent,
+    ContactComponent,
+    HomepageComponent,
+    NotFoundComponent,
+    AdminComponent,
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes),
   
   ],
   providers: [SourceService],

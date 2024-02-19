@@ -1,0 +1,12 @@
+div{
+    color: green;
+    display: block;
+}
+select{
+    color:black;
+    border-color: white;
+}
+button{
+    color:black;
+    background-color: white;
+}

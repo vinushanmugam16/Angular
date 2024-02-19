@@ -8,3 +8,28 @@
 <div>
     <ng-content select="[states]"></ng-content>
 </div>
+
+<div>
+<ng-template #refVariable>
+    <button *ngIf="true">Button</button>
+    <p>This is done using template reference variable </p></ng-template>
+
+<p *ngTemplateOutlet="refVariable"></p>
+</div>
+
+
+<div>
+    <ng-container *ngIf="state" >
+        <p>Toggle is on</p>
+    </ng-container>
+    <ng-template #variable>
+        <p>Toggle is off</p>
+    </ng-template>
+    <button (click)="onToggle()">Toggle Button</button>
+</div>
+
+<div>
+    <ng-container get="[refer]">
+        <p>It is to construct logical condition</p>
+    </ng-container>
+</div>

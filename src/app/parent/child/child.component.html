@@ -54,8 +54,8 @@
 
 <div>
     <button (click)="dec()">Dec</button>
-    <button (click)="inc()">Inc</button>
-    <!-- <input type="number" [(ngModel)] = "size"> -->
+    <button (click)="inc()">Inc</button><br>
+    <input type="number" [(ngModel)] = "size">
     <p>Dress Size:{{size}}</p>
 </div>
 
@@ -97,5 +97,10 @@
 
     <div>
         <button (click)="updateValue()">Button</button>
-        
     </div>
+
+    <div>
+        <button (click)="getState()">Button</button>
+        <p>Result:{{state2}}</p>
+    </div>
+   

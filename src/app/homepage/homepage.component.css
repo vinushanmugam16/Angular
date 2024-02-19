@@ -1,0 +1,22 @@
+.setpage{
+    display: block;
+    color:rgb(236, 187, 25);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(11, 10, 12);
+    width: 200vh;
+    height: 50vh;
+    text-align: center;
+}
+a{
+    color:hotpink;
+    font-weight: bold;
+}
+h1{
+    outline-color: aquamarine;
+    color: deepskyblue;
+    font-size: large;
+}
+.state{
+    font-size: 24px;
+    font-weight: bold;
+}

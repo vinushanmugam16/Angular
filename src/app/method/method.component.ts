@@ -5,11 +5,14 @@ import { Component, Input,OnChanges, SimpleChanges } from '@angular/core';
   templateUrl: './method.component.html',
   styleUrls: ['./method.component.css']
 })
-export class MethodComponent implements OnChanges{
+export class MethodComponent {
 
   @Input() message:string='';
+  data:string='';
+  title:string='';
+  state:string=''
   constructor(){
-    
+    this.state='Hello from Constructor';
   }
   
   ngOnChanges(changes: SimpleChanges): void {
@@ -17,4 +20,10 @@ export class MethodComponent implements OnChanges{
      console.log(changes);
     
   }
+
+  ngOnInit(){
+    this.data='Have a good Day';
+    this.title='NgOnInit has called';
+  }
+
 }

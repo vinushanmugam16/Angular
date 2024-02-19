@@ -29,4 +29,10 @@ export class ParentComponent {
     this.num;
   }
 
+  sentence:string=''
+
+  source:string=' ';
+  gettingString(event:any){
+    this.source=event;
+  }
 }

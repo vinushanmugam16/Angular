@@ -1,0 +1,24 @@
+div{
+    display: flex;
+    flex:3;
+    flex-flow: column;
+    flex-basis: auto;
+    color:rgb(235, 103, 136);
+    font-weight: bold;  
+    background-color:rgb(17, 11, 11);
+    width: 200vh;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+}
+
+#foot{
+    /* display: block; */
+    color:rgb(83, 171, 243);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(54, 59, 61);
+    width: 200vh;
+    height: 30vh;
+    text-align: center;
+}
+

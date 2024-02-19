@@ -11,6 +11,8 @@
   [name]="person" 
   [inStock]="stock" 
   (message)="receiveMsg($event)"
-  (state)="getNum()"></app-child>
+  (state)="getNum()"
+  (state2)='gettingString($event)'></app-child>
+  
    <p>Number:{{num}}</p>
  

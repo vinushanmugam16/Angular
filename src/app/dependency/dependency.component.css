@@ -1,3 +1,8 @@
 div{
     display:block;
 }
+.setdetail{
+    color:blueviolet;
+    display: inline-block;
+    padding: 20px;
+}

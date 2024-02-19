@@ -6,10 +6,17 @@ import { HydrationFeatureKind } from '@angular/platform-browser';
 })
 export class CustompipePipe implements PipeTransform {
 
-  transform(value: number, exponent: 2): number {
-    return Math.pow(value,exponent);
-  }
+  // transform(value: number, exponent: 2): number {
+  //   return Math.pow(value,exponent);
+  // }
 
+  // transform(input:string):any{
+  //      return (input + ' Welcome!..');
+  // }
+
+  transform(input:string):any{
+    return (input + ' Welcome!..');
+}  
 
   //input -hey
   //output-hey welcome!...
