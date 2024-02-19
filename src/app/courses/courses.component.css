@@ -1,0 +1,17 @@
+div{
+    background-color: black;
+    color:rgb(221, 215, 218);
+    text-align: center;
+}
+.engineer{
+    display: block;
+    border: 3px solid rgb(238, 26, 26);
+    width: 100vh;
+    height: 20vh;
+}
+.business{
+    display: block;
+    border: 3px solid rgb(212, 27, 27);
+    width: 100vh;
+    height: 20vh;
+}

@@ -33,17 +33,22 @@ import { ContactComponent } from './contact/contact.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AdminComponent } from './dependency/admin/admin.component';
+import { CoursesComponent } from './courses/courses.component';
+import { CoursedetailComponent } from './courses/coursedetail/coursedetail.component';
+import { PricesComponent } from './courses/prices/prices.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 
-const routes:Routes=[
-    {path:'',component:HomepageComponent},
-    {path:'Homepage',component:HomepageComponent},
-    {path: 'Page' ,component:PageComponent},
-    {path:'About',component:AboutComponent},
-    {path:'Contact',component:ContactComponent},
-    {path:'**',component:NotFoundComponent}
-]
+// const routes:Routes=[
+
+//     {path:'',component:HomepageComponent},
+//     {path:'Homepage',component:HomepageComponent},
+//     {path: 'Page' ,component:PageComponent},
+//     {path:'About',component:AboutComponent},
+//     {path:'Contact',component:ContactComponent},
+//     {path:'**',component:NotFoundComponent}
+// ]
 
 
 @NgModule({
@@ -76,6 +81,10 @@ const routes:Routes=[
     HomepageComponent,
     NotFoundComponent,
     AdminComponent,
+    CoursesComponent,
+    CoursedetailComponent,
+    PricesComponent,
+    LoginpageComponent,
 
 
   ],
@@ -83,7 +92,7 @@ const routes:Routes=[
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
   
   ],
   providers: [SourceService],
