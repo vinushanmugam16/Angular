@@ -1,0 +1,62 @@
+<p>templatedriven works!</p>
+
+
+<!-- /*(ngSubmit)="onSubmit(registerform)" #registerform*/ -->
+<div class="maintain-style">
+    <h1 class="heading">Registration Form</h1><br>
+    <form  (ngSubmit)="onSubmit(registerform)" #registerform="ngForm">                                       
+        <div>
+            <div>
+                <input  type="text" placeholder="Firstname" name='firstname' [(ngModel)]="firstname" required #fname="ngModel">
+                <small *ngIf= 'fname.invalid && fname.touched'>*Firstname is required</small>
+            </div>
+            <div>
+                <input type="text" placeholder="Lastname" name='lastname' [(ngModel)]="lastname" required #lname="ngModel" >
+                <small *ngIf= 'lname.invalid && lname.touched'>*lastname is required</small>
+            </div>
+        </div>
+        <!-- <div>
+            <input type="text" placeholder="Username" ngModel required #uname="ngModel"><br>
+            <button type="button" (click)="createUsername()">Create a UserName</button>
+            <div>
+                <small *ngIf= 'uname.invalid '>Username is required</small>
+            </div>
+        </div> -->
+        <div>
+            <input type="text" placeholder="Email" name='email' [(ngModel)]="emailadd" required #email="ngModel">
+            <small *ngIf= 'email.invalid && email.touched'>Email is required</small>
+        </div>
+
+        <div>
+            <input type="number" placeholder="Phone Number" name='phoneNumber' ngModel >
+        </div>
+
+        <div>
+            <input type="date" placeholder="Date of Birth" name='dob' ngModel>
+        </div>
+        <div>
+            <h3>Gender</h3>
+            <input type="radio" value='male' name="gender" id="check-male" ngModel >
+            <label name="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" value='female' name="gender" id="check-female" ngModel>
+            <label name="female">Female</label>
+        </div>
+        <div>
+            <select name="Country" ngModel>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>German</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="buttonstyle">
+        </div>
+    </form>
+</div>
+
+
+

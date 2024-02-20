@@ -1,0 +1,61 @@
+<p>forms works!</p>
+<!-- /*(ngSubmit)="onSubmit(registerform)" #registerform*/ -->
+
+
+<div class="maintain-style">
+    <h1 class="heading">Registration Form</h1><br>
+    <form [formGroup]="reactiveform">                                       
+        <div>
+            <div>
+                <input type="text" placeholder="Firstname" formControlName="firstname">
+                <small class="validate" *ngIf="reactiveform.get('firstname').invalid && reactiveform.get('firstname').touched">*Firstname is required</small>
+            </div>
+            <div>
+                <input type="text" placeholder="Lastname" formControlName="lastname" >
+                <small class="validate" *ngIf="reactiveform.get('lastname').invalid && reactiveform.get('lastname').touched">*lastname is required</small>
+            </div>
+        </div>
+        <div>
+            <input type="text" placeholder="Username" formControlName="username"><br>
+            <button type="button" (click)="createUsername()">Create a UserName</button>
+
+        </div>
+        <div>
+            <input type="text" placeholder="Email" formControlName="email" >
+            <small class="validate" *ngIf="reactiveform.get('email').invalid && reactiveform.get('email').touched">*Email is required</small>
+        </div>
+
+        <div>
+            <input type="number" placeholder="Phone Number" formControlName="phoneNumber">
+            
+        </div>
+
+        <div>
+            <input type="date" placeholder="Date of Birth" formControlName="dob">
+           
+        </div>
+        <div>
+            <h3>Gender</h3>
+            
+            <input type="radio" value='male' name="gender" id="check-male" formControlName="gender">
+            <label name="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" value='female' name="gender" id="check-female" formControlName="gender">
+            <label name="female">Female</label>
+        </div>
+        <div>
+            <select name="Country" formControlName="country">
+                <small class="validate">*Country is required</small>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>German</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Submit" (click)='onSubmit()' class="buttonstyle" [disabled]="reactiveform.valid" >
+        </div>
+    </form>
+</div>

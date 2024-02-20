@@ -11,13 +11,44 @@
 
 
 
+<!-- 
 
+<h1>Dynamic table</h1>
+<div class="container">
+  <table>
+<thead>
+<tr>
+  <th *ngFor="let head of headings">{{head.label}}</th>
+</tr>
+</thead>
+<tbody>
+ <tr *ngFor="let student of data">
+  <td *ngFor="let head of headings">
+    {{student[head.key]}}
+  </td>
+</tr>
+</tbody>
+  </table>
+</div>
 
-
-
-
-
-
+<h1>Employee Details</h1>
+<div>
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let key of tablehead">{{key.value}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of details">
+      <td *ngFor="let option of tablehead">
+        {{emp[option.item]}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+ -->
 
 
 
@@ -77,6 +108,11 @@
 
 
 
-<app-homepage></app-homepage>
+<!-- <app-homepage></app-homepage>
 <router-outlet></router-outlet>
-<app-page></app-page>
+<app-page></app-page> -->
+
+
+<!-- <app-forms></app-forms> -->
+
+<app-templatedriven></app-templatedriven>

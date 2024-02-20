@@ -12,6 +12,18 @@ export class AuthService{
     login(fullName:string,password:string){
         this.users.mainLogin.find((value)=>value.fullName=== fullName && value.password===password );
 
-            // if(fullName===undefined)
+            if(fullName===undefined){
+                this.isLogged=false;
+            }
+            else{
+                this.isLogged=true;
+            }
+            return this.users;
+    }
+    logout(){
+        this.isLogged=false
+    }
+    isAuthenticated(){
+        return this.isLogged;
     }
 }

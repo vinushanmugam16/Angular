@@ -12,7 +12,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 const routes:Routes=[
-  // { path: '',   redirectTo: 'HomepageComponent', pathMatch: 'full' },
+  // { path: '',   redirectTo: 'Homepage', pathMatch: 'full' },
   {path:'',component:HomepageComponent},
   {path:'Homepage',component:HomepageComponent},
   {path: 'Page' ,title:'Page'  ,component:PageComponent},
@@ -24,11 +24,13 @@ const routes:Routes=[
   {path:'Prices',component:PricesComponent, canActivate:[()=>{return true;} ]}
 ]},
   {path:'LoginPage',component:LoginpageComponent},
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: 'article', loadChildren: () => import('./article/article.module').then(m => m.ArticleModule) },
   {path:'**',title:'Page Not Found',component:NotFoundComponent}
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

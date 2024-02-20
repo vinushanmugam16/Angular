@@ -24,7 +24,7 @@ import { NoneComponent } from './view-encapsulation/none/none.component';
 import { EmulatedComponent } from './view-encapsulation/emulated/emulated.component';
 import { MethodComponent } from './method/method.component';
 import { CustompipePipe } from './custompipe.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideBarComponent } from './dependency/main/side-bar/side-bar.component';
 import { SourceService } from './dependency/service/source.service';
 import { PageComponent } from './page/page.component';
@@ -37,6 +37,9 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursedetailComponent } from './courses/coursedetail/coursedetail.component';
 import { PricesComponent } from './courses/prices/prices.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { FormsComponent } from './forms/forms.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+import { HttpclientModuleComponent } from './httpclient-module/httpclient-module.component';
 
 
 
@@ -85,6 +88,9 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     CoursedetailComponent,
     PricesComponent,
     LoginpageComponent,
+    FormsComponent,
+    TemplatedrivenComponent,
+    HttpclientModuleComponent,
 
 
   ],
@@ -92,6 +98,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     // RouterModule.forRoot(routes),
   
   ],
