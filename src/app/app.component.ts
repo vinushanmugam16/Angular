@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { data, details, employeeData, studentData, tableheaderName, theadNamings } from './table-data';
+import { Task } from './dependency/Model/task';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +31,9 @@ data:data[]=studentData;
 
 tablehead=theadNamings;
 details:details[]=employeeData;
+
+
+
 
 
 }

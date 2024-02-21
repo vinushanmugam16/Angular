@@ -1,1 +1,22 @@
 <p>httpclient-module works!</p>
+
+<div>
+        <form  (ngSubmit)="onSubmit(taskform)" #taskform="ngForm">                                       
+            <div>
+                <div>
+                    <input  type="text" placeholder="Firstname" name='firstname' [(ngModel)]="firstname" required #fname="ngModel">
+                    <small *ngIf= 'fname.invalid && fname.touched'>*Firstname is required</small>
+                </div>
+                <div>
+                    <input type="text" placeholder="Lastname" name='lastname' [(ngModel)]="lastname" required #lname="ngModel" >
+                    <small *ngIf= 'lname.invalid && lname.touched'>*lastname is required</small>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+
+            
+    </form>
+</div>

@@ -20,8 +20,8 @@ export class ParentComponent {
 
  
   note:string='';
-  receiveMsg($event:string){
-   this.note=$event;
+  receiveMsg(event:any){
+   this.note=event.target.value;
   }
 
   num:number;

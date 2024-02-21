@@ -10,7 +10,9 @@ export class MethodComponent {
   @Input() message:string='';
   data:string='';
   title:string='';
-  state:string=''
+  state:string='';
+
+  
   constructor(){
     this.state='Hello from Constructor';
   }
@@ -24,6 +26,7 @@ export class MethodComponent {
   ngOnInit(){
     this.data='Have a good Day';
     this.title='NgOnInit has called';
+   
   }
 
 }

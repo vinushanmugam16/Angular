@@ -18,18 +18,6 @@ export class PipesComponent {
 
   digit:number=23456;
 
-  // data:string='';
-  // constructor(){
-  //   this.getData().then(v=>this.data = v);
-  // }
-
-  // getData(){
-  //   return new Promise((resolve,reject)=>{
-  //     setTimeout(()=>resolve('Promise completed'),1000);
-  //   }
-  //   )
-  // }
-
 
   details:Object={
     name:['Lila','Sita','Diya'],

@@ -45,4 +45,12 @@ export class PracticeComponent {
 
   }
   
+
+
+value=34;
+onChangeValue(){
+  this.value;
+}
+
+
 }

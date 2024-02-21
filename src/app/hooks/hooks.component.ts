@@ -8,7 +8,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class HooksComponent implements OnChanges,OnInit,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy{
 
   @Input() data:string='';
-  // count:number=0;
+  count:number=0;
   title:string='';
   constructor(){
       this.title='Constructor has occured';
@@ -16,8 +16,8 @@ export class HooksComponent implements OnChanges,OnInit,DoCheck,AfterContentInit
   }
 
   ngOnChanges(): void {
-      // this.count++;
-      console.log('ngOnChanges have called')
+      this.count++;
+      console.log('ngOnChanges have called');
   }
   ngOnInit():void{
     console.log('ngOnInit have called');
@@ -26,6 +26,7 @@ export class HooksComponent implements OnChanges,OnInit,DoCheck,AfterContentInit
   ngDoCheck(): void {
     console.log('ngDocheck has called');
   }
+  
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit has called');
   }

@@ -1,0 +1,37 @@
+<p>verbspage works!</p>
+
+
+
+
+
+
+
+<form>
+    <div *ngIf="allDetails.length < 1">
+        <h1>No task are created</h1>
+    </div>
+    <div class="newstate" *ngFor="let detail of allDetails">
+        <h1 class="heading-style">New Person</h1>
+        <p>Firstname: {{detail.firstname}}</p>
+        <p>Lastname: {{detail.lastname}}</p>
+        <div>
+            <button (click)="deleteDetail(id)">Delete</button>
+        </div>
+    </div>
+  
+    <div>
+        <button (click)="clearAll()">Clear</button>
+    </div>
+    <div>
+        <button (click)="fetchDetail()">Fetch</button>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+<app-httpclient-module  (taskdata)="createTask($event)"></app-httpclient-module>

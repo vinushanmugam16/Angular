@@ -20,23 +20,21 @@ export class TemplatedrivenComponent {
    console.log(form);
  }
 
-  createUsername(){
-    let user='';
-    if(this.firstname.length>=3){
-      user+=this.firstname.slice(0,3);
-    }
-    else{
-      user+=this.firstname;
-    }
-    if(this.lastname.length>=3){
-      user+=this.lastname.slice(0,3);
-    }
-    else{
-      user+=this.lastname;
-    }
-    console.log(user);
-
-
-}
+  // createUsername(){
+  //   let user='';
+  //   if(this.firstname.length>=3){
+  //     user+=this.firstname.slice(0,3);
+  //   }
+  //   else{
+  //     user+=this.firstname;
+  //   }
+  //   if(this.lastname.length>=3){
+  //     user+=this.lastname.slice(0,3);
+  //   }
+  //   else{
+  //     user+=this.lastname;
+  //   }
+  //   console.log(user);
+//}
   
 }

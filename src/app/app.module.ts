@@ -40,7 +40,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { HttpclientModuleComponent } from './httpclient-module/httpclient-module.component';
-
+import {HttpClientModule} from '@angular/common/http';
+import { VerbspageComponent } from './verbspage/verbspage.component';
 
 
 // const routes:Routes=[
@@ -91,6 +92,7 @@ import { HttpclientModuleComponent } from './httpclient-module/httpclient-module
     FormsComponent,
     TemplatedrivenComponent,
     HttpclientModuleComponent,
+    VerbspageComponent,
 
 
   ],
@@ -99,6 +101,7 @@ import { HttpclientModuleComponent } from './httpclient-module/httpclient-module
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     // RouterModule.forRoot(routes),
   
   ],
