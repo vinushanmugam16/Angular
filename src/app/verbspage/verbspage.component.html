@@ -1,11 +1,5 @@
 <p>verbspage works!</p>
 
-
-
-
-
-
-
 <form>
     <div *ngIf="allDetails.length < 1">
         <h1>No task are created</h1>
@@ -19,6 +13,9 @@
         </div>
     </div>
   
+    <div>
+        <button (click)="onEdit()">Edit</button>
+    </div>
     <div>
         <button (click)="clearAll()">Clear</button>
     </div>

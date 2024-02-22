@@ -7,6 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit{
+    canExit() {
+        throw new Error("Method not implemented.");
+    }
 
       
     state: ActivatedRoute= inject(ActivatedRoute);

@@ -10,6 +10,7 @@ import { CoursedetailComponent } from './courses/coursedetail/coursedetail.compo
 import { PricesComponent } from './courses/prices/prices.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { Canactivate } from './routeguard/canactivate';
+// import { CanDeActivateService } from './service/canDeactivate.service';
 
 
 const routes:Routes=[
@@ -19,7 +20,7 @@ const routes:Routes=[
   {path: 'Page' ,title:'Page'  ,component:PageComponent},
   {path:'About',title:'About',component:AboutComponent},
   {path:'Contact',title:'Contact',component:ContactComponent , canActivate:[Canactivate]},
-  {path:'Courses',title:'Courses',component:CoursesComponent},
+  {path:'Courses',title:'Courses',component:CoursesComponent },
   {path:'Courses',children:[
   { path:'CourseDetail',component:CoursedetailComponent},
   {path:'Prices',component:PricesComponent, canActivate:[()=>{return true} ]}
@@ -35,4 +36,5 @@ const routes:Routes=[
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 

@@ -32,7 +32,10 @@ data:data[]=studentData;
 tablehead=theadNamings;
 details:details[]=employeeData;
 
-
+information:string='';
+onMessaging(){
+  this.information='Hello I\'m there';
+}
 
 
 

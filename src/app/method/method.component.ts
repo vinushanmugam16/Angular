@@ -1,11 +1,11 @@
-import { Component, Input,OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input,OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-method',
   templateUrl: './method.component.html',
   styleUrls: ['./method.component.css']
 })
-export class MethodComponent {
+export class MethodComponent implements OnChanges, OnInit{
 
   @Input() message:string='';
   data:string='';
@@ -28,5 +28,7 @@ export class MethodComponent {
     this.title='NgOnInit has called';
    
   }
+
+ 
 
 }

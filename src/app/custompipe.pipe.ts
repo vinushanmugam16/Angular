@@ -10,10 +10,7 @@ export class CustompipePipe implements PipeTransform {
   //   return Math.pow(value,exponent);
   // }
 
-  // transform(input:string):any{
-  //      return (input + ' Welcome!..');
-  // }
-
+ 
   transform(input:string):any{
     return (input + ' Welcome!..');
 }  

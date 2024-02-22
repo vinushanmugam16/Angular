@@ -12,8 +12,8 @@ import { PracticeComponent } from './practice/practice.component';
 import { ViewEncapsulationComponent } from './view-encapsulation/view-encapsulation.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
-import { DependencyComponent } from './dependency/dependency.component';
 import { HeaderComponent } from './header/header.component';
+import { DependencyComponent } from './dependency/dependency.component';
 import { HomeComponent } from './header/home/home.component';
 import { SidebarComponent } from './header/home/sidebar/sidebar.component';
 import { MainComponent } from './dependency/main/main.component';
@@ -40,8 +40,13 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { HttpclientModuleComponent } from './httpclient-module/httpclient-module.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { VerbspageComponent } from './verbspage/verbspage.component';
+import { AuthInterceptorService } from './service/auth-interceptor.service';
+import { ObservComponent } from './observ/observ.component';
+import { LoginInterceptor } from './service/login-interceptor.service';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+
 
 
 // const routes:Routes=[
@@ -93,6 +98,8 @@ import { VerbspageComponent } from './verbspage/verbspage.component';
     TemplatedrivenComponent,
     HttpclientModuleComponent,
     VerbspageComponent,
+    ObservComponent,
+    ReactiveformComponent,
 
 
   ],
@@ -105,7 +112,8 @@ import { VerbspageComponent } from './verbspage/verbspage.component';
     // RouterModule.forRoot(routes),
   
   ],
-  providers: [SourceService],
+  providers: [SourceService ,{provide : HTTP_INTERCEPTORS, useClass:AuthInterceptorService, multi:true},
+                            {provide: HTTP_INTERCEPTORS, useClass:LoginInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

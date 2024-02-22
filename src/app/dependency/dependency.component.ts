@@ -18,3 +18,4 @@ export class DependencyComponent {
    state2=this.detail.getAll();
 
 }
+
