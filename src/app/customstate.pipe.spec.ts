@@ -1,8 +1,8 @@
-import { CustompipePipe } from './custompipe.pipe';
+import { CustomstatePipe } from './customstate.pipe';
 
 describe('CustompipePipe', () => {
   it('create an instance', () => {
-    const pipe = new CustompipePipe();
+    const pipe = new CustomstatePipe();
     expect(pipe).toBeTruthy();
   });
 });

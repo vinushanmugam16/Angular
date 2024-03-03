@@ -23,7 +23,7 @@ import { ShadowComponent } from './view-encapsulation/shadow/shadow.component';
 import { NoneComponent } from './view-encapsulation/none/none.component';
 import { EmulatedComponent } from './view-encapsulation/emulated/emulated.component';
 import { MethodComponent } from './method/method.component';
-import { CustompipePipe } from './custompipe.pipe';
+import { CustomstatePipe } from './customstate.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SideBarComponent } from './dependency/main/side-bar/side-bar.component';
 import { SourceService } from './dependency/service/source.service';
@@ -45,8 +45,13 @@ import { VerbspageComponent } from './verbspage/verbspage.component';
 import { AuthInterceptorService } from './service/auth-interceptor.service';
 import { ObservComponent } from './observ/observ.component';
 import { LoginInterceptor } from './service/login-interceptor.service';
-import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-
+import { SourceComponent } from './source/source.component';
+import { TestService } from './test.service';
+import { SecondTestService } from './secondtest.service';
+import { InternationalizationComponent } from './internationalization/internationalization.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AnimatingComponent } from './animating/animating.component';
+import { ObservationComponent } from './observation/observation.component'
 
 
 // const routes:Routes=[
@@ -82,7 +87,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     NoneComponent,
     EmulatedComponent,
     MethodComponent,
-    CustompipePipe,
+    CustomstatePipe,
     SideBarComponent,
     PageComponent,
     AboutComponent,
@@ -99,7 +104,10 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     HttpclientModuleComponent,
     VerbspageComponent,
     ObservComponent,
-    ReactiveformComponent,
+    SourceComponent,
+    InternationalizationComponent,
+    AnimatingComponent,
+    ObservationComponent,
 
 
   ],
@@ -109,11 +117,15 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     // RouterModule.forRoot(routes),
   
   ],
   providers: [SourceService ,{provide : HTTP_INTERCEPTORS, useClass:AuthInterceptorService, multi:true},
-                            {provide: HTTP_INTERCEPTORS, useClass:LoginInterceptor,multi:true}],
+                            {provide: HTTP_INTERCEPTORS, useClass:LoginInterceptor,multi:true},
+                          // {provide:TestService, useClass:SecondTestService},
+                        // {provide:SourceComponent, useClass:SecondTestService},
+                      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

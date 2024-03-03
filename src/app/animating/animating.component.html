@@ -1,0 +1,15 @@
+<p>animating works!</p>
+
+
+<div>
+    <p  [@clicktrigger]="'clicked'"> changing color to blue</p>
+
+    <p [@clicktrigger]="'close'">changing color to red</p>
+
+</div>
+    
+<div [@toggleClick]="isColor?'open':'close'">
+    <p>Hi Hello</p>
+</div>
+
+<button (click)="toggling()">ToggleButton</button>

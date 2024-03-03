@@ -25,3 +25,13 @@ export class UserService {
   }
 
 }
+
+
+// "i18n": {
+//   "sourceLocale": "en-US",
+//   "locales": {
+//     "fr":{
+//       "translation":"src/locale/messages.fr.xlf"
+//     } 
+//   }
+// },

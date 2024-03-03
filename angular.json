@@ -5,7 +5,18 @@
   "projects": {
     "angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "i18n": {
+          "sourceLocale": "en-US",
+          "locales": {
+            "fr":{
+              "translation":"src/locale/messages.fr.xlf"
+            } 
+          }
+        }
+      },
+
+     
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,6 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize":true,
             "outputPath": "dist/angular",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -30,6 +42,16 @@
             "scripts": []
           },
           "configurations": {
+
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/fr/",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr",
+              "i18nMissingTranslation": "error",
+              "baseHref": "/fr/"
+            },
             "production": {
               "budgets": [
                 {
@@ -59,6 +81,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "fr":{
+              "browserTarget": "angular:build:fr"
+            },
             "production": {
               "browserTarget": "angular:build:production"
             },
@@ -71,7 +96,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular:build"
+            "browserTarget": "angular:build:fr"
           }
         },
         "test": {
@@ -89,7 +114,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
           }
         }
       }

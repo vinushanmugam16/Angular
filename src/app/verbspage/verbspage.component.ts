@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../dependency/Model/task';
 import { map } from 'rxjs';
 
@@ -11,8 +11,11 @@ import { map } from 'rxjs';
 export class VerbspageComponent implements OnInit {
 
 
+  constructor(private http:HttpClient){
 
-http:HttpClient=inject(HttpClient)
+  }
+
+
 allDetails:Task[]=[];
 id: string;
 ngOnInit(){
@@ -65,7 +68,7 @@ clearAll() {
   }
 
   onEdit(){
-    // this.allDetails.find
+  
     const name={firstname:'Elisa', lastname:'John'};
     this.http.put('https://angularhttpclient-394e7-default-rtdb.firebaseio.com/tasks.json',name)
     .subscribe(()=>this.allDetails.push(name));

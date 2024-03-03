@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { HydrationFeatureKind } from '@angular/platform-browser';
 
 @Pipe({
-  name: 'custompipe'
+  name: 'customstate'
 })
-export class CustompipePipe implements PipeTransform {
+export class CustomstatePipe implements PipeTransform {
 
   // transform(value: number, exponent: 2): number {
   //   return Math.pow(value,exponent);
